@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <Layout />
+    <Layout/>
   </div>
 </template>
-
 <script>
 import Layout from './components/Layout.vue'
 
@@ -26,5 +25,15 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.btn-group {
+  text-align: center;
+}
+button {
+  border: 0;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
 </style>
