@@ -2,7 +2,8 @@
   <div class="wrapper">
     <div class="inner-wrapper">
       <!-- <Start/> -->
-      <Restart/>
+      <!-- <Restart/> -->
+      <Main/>
     </div>
   </div>
 </template>
@@ -11,11 +12,13 @@
 // Components
 import Start from './Start.vue';
 import Restart from './Restart.vue';
+import Main from './Main.vue';
 
 export default {
   name: 'Layout',
   components: {
     Start,
+    Main,
     Restart
   }
 }
@@ -34,10 +37,6 @@ export default {
   justify-content: center;
   padding: 20px;
   height: 100%;
-}
-@media all and (min-width: 767px) {
-  .inner-wrapper {
-  }
 }
 </style>
 
