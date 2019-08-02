@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
     <div class="inner-wrapper">
-      <Start/>
+      <!-- <Start/> -->
+      <Restart/>
     </div>
   </div>
 </template>
@@ -9,11 +10,13 @@
 <script>
 // Components
 import Start from './Start.vue';
+import Restart from './Restart.vue';
 
 export default {
   name: 'Layout',
   components: {
-    Start
+    Start,
+    Restart
   }
 }
 </script>

@@ -14,7 +14,10 @@
 
     <!-- 按鈕區域開始 -->
     <div class="btn-group">
-      <button type="button">
+      <button 
+        type="button"
+        class="primary-btn"
+      >
         START!
       </button>
       <p>try to answer more as you can</p>
@@ -61,19 +64,6 @@ export default {
 }
 .btn-group {
   margin-top: 30px;
-  button {
-    padding: 10px 30px;
-    width: 100%;
-    background-color: $black;
-    color: $primaryOrange;
-    font-weight: $primaryFontWeight;
-    font-size: 20px;
-    transition: all 0.5s;
-    &:hover {
-      background-color: $white;
-      color: $black;
-    }
-  }
   p {
     margin: 10px 0 0 0;
     color: $white;
@@ -97,10 +87,6 @@ export default {
     }
   }
   .btn-group {
-    button {
-      width: 350px;
-      font-size: 30px;
-    }
     p {
       font-size: 18px;
     }
@@ -123,9 +109,6 @@ export default {
     }
   }
   .btn-group {
-    button {
-      font-size: 36px;
-    }
     p {
       font-size: 20px;
     }
