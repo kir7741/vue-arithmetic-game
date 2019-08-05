@@ -45,15 +45,14 @@
           {{ lastNum }}
         </span>
         <span class="operator">=</span>
-        <input 
-          type="text"
-          v-model="userAnswer"
-          @keyup.enter="answerQuestion"
-        >
+        <div class="anwser-box">
+          <input 
+            type="text"
+            v-model="userAnswer"
+            @keyup.enter="answerQuestion"
+          >
+        </div>
       </div>
-      <p>
-        press enter to answer
-      </p>
     </div>
     <!-- 答題區域結束 -->
 
@@ -136,7 +135,7 @@ export default {
     /**
      * 於指定範圍取得隨機數字
      */
-    getRandom(start, end){
+    getRandom(start, end) {
       return Math.floor(Math.random() * (end - start + 1)) + start;
     },
     /**
@@ -343,15 +342,31 @@ export default {
   > div {
     display: flex;
     align-items: center;
+    > * {
+      line-height: 40px;
+    }
+  }
+  .anwser-box {
+    position: relative;
+
     > input {
       width: 180px;
       padding: 5px;
       font-size: 40px;
       font-weight: $primaryFontWeight;
     }
-    > * {
-      line-height: 40px;
+
+    &:after {
+      content: 'press enter to answer';
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -20px;
+      color: $white;
+      line-height: 20px;
+      text-align: center;
     }
+    
   }
   font-weight: $primaryFontWeight;
   .num {
@@ -392,15 +407,19 @@ export default {
   }
   .answer-area {
     > div {
+      > * {
+        line-height: 70px;
+      }
+    }
+    .anwser-box {
+
       > input {
         width: 300px;
         padding: 10px;
         font-size: 70px;
         line-height: 80px;
       }
-      > * {
-        line-height: 70px;
-      }
+
     }
     .num {
       font-size: 70px;
