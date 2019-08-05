@@ -11,12 +11,13 @@
       <span>—</span>
     </h2>
     <div class="score">
-      74
+      {{ score }}
     </div>
     <div class="btn-group">
       <button 
         type="button"
         class="primary-btn"
+        @click="restartGame"
       >
         TRY AGAIN!
       </button>
@@ -25,8 +26,24 @@
 </template>
 
 <script>
+// Enums
+import FlowStatus from '../enum/flow-status.enum';
+
 export default {
-  name: 'Restart'
+  name: 'Restart',
+  props: {
+    initScore: Number
+  },
+  data() {
+    return {
+      score: this.initScore
+    }
+  },
+  methods: {
+    restartGame() {
+      this.$emit('restartGame', FlowStatus.PENDING);
+    }
+  }
 }
 </script>
 

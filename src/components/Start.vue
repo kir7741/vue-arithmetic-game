@@ -17,6 +17,7 @@
       <button 
         type="button"
         class="primary-btn"
+        @click="startGame()"
       >
         START!
       </button>
@@ -28,8 +29,19 @@
 </template>
 
 <script>
+// Enums
+import FlowStatus from '../enum/flow-status.enum';
+
 export default {
-  name: 'Start'
+  name: 'Start',
+  methods: {
+    /**
+     * 發送開始遊戲的事件
+     */
+    startGame() {
+      this.$emit('startGame', FlowStatus.PLAYING);
+    }
+  }
 }
 </script>
 

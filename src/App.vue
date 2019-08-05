@@ -50,6 +50,11 @@ button {
     outline: none;
   }
 }
+input {
+  &:focus {
+    outline: none;
+  }
+}
 @media all and (min-width: 768px) {
 
   .primary-btn {
